@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEOLUZ Studio | Diseño, Web y Neón</title>
+    <meta name="description" content="Portfolio de NEOLUZ Studio. Diseño web, tiendas online, sistemas de gestión, invitaciones digitales, cartelería de neón y diseño gráfico.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#050505] text-white selection:bg-violet-500/30 overflow-x-hidden">
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Navegación -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <a href="#inicio" class="flex items-center gap-3" aria-label="Ir al inicio">
+                <span class="logo-dot"></span>
+                <span class="text-lg md:text-xl font-bold tracking-tighter font-syncopate neon-text">
+                    NEOLUZ
+                </span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-[11px] font-semibold tracking-[0.2em] uppercase">
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#estudio" class="nav-link">Estudio</a>
+                <a href="#proceso" class="nav-link">Proceso</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#contacto" class="hidden sm:inline-flex px-5 py-2.5 border border-violet-400/40 text-[10px] tracking-[0.2em] uppercase rounded-full hover:border-violet-400 hover:bg-violet-400/10 transition-all">
+                    Hablemos
+                </a>
+
+                <button id="menu-button" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10" aria-label="Abrir menú" aria-expanded="false">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-black/95 backdrop-blur-xl">
+            <div class="px-6 py-6 flex flex-col gap-5 text-sm tracking-[0.2em] uppercase">
+                <a href="#proyectos" class="mobile-link">Proyectos</a>
+                <a href="#servicios" class="mobile-link">Servicios</a>
+                <a href="#estudio" class="mobile-link">Estudio</a>
+                <a href="#proceso" class="mobile-link">Proceso</a>
+                <a href="#contacto" class="mobile-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <main>
+        <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+            <canvas id="canvas-lines" class="absolute inset-0 z-0 opacity-50"></canvas>
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 hero-glow"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto w-full px-6 py-24">
+                <div class="max-w-5xl">
+                    <div class="hero-kicker inline-flex items-center gap-3 mb-8 px-4 py-2 rounded-full border border-violet-400/25 bg-violet-400/[0.06] text-violet-200 text-[10px] tracking-[0.28em] uppercase">
+                        <span class="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse"></span>
+                        Diseño, tecnología y producción visual
+                    </div>
+
+                    <h1 class="hero-title text-[3.3rem] sm:text-7xl md:text-[6.8rem] lg:text-[8rem] font-bold font-syncopate tracking-[-0.06em] leading-[0.92] mb-8">
+                        DISEÑO QUE
+                        <span class="block text-transparent outline-text">SE HACE REAL.</span>
+                    </h1>
+
+                    <p class="hero-copy text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed font-light mb-10">
+                        Diseñamos experiencias digitales, sistemas y piezas visuales que hacen que una marca se vea sólida, profesional y lista para crecer.
+                    </p>
+
+                    <div class="hero-actions flex flex-col sm:flex-row gap-4">
+                        <a href="#proyectos" class="primary-button">
+                            Ver proyectos
+                            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                        </a>
+
+                        
+                    </div>
+                </div>
+
+                <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
+                    <div class="mini-stat">
+                        <span>01</span>
+                        <p>Diseño web</p>
+                    </div>
+                    <div class="mini-stat">
+                        <span>02</span>
+                        <p>Tiendas online</p>
+                    </div>
+                    <div class="mini-stat">
+                        <span>03</span>
+                        <p>Sistemas</p>
+                    </div>
+                    <div class="mini-stat">
+                        <span>04</span>
+                        <p>Neón y gráfica</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-8 right-6 md:right-10 hidden sm:flex items-center gap-3 text-[9px] tracking-[0.25em] uppercase text-white/30 rotate-90 origin-bottom-right">
+                Scroll para explorar
+                <span class="w-16 h-px bg-white/20"></span>
+            </div>
+        </section>
+
+        <!-- Marquee -->
+        <!-- Marcas que confiaron en NEOLUZ -->
+<section class="brands-section">
+
+    <div class="brands-heading">
+        <span class="brands-line"></span>
+        <p>Marcas que confiaron en NEOLUZ</p>
+        <span class="brands-line"></span>
+    </div>
+
+    <div class="brands-marquee">
+
+        <div class="brands-track">
+
+            <!-- Grupo 1 -->
+
+           <div class="brands-group">
+
+                <div class="brand-item">
+                    <img src="assets/icon/logo.png" alt="Lo De Fausti">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/crecer.PNG" alt="Instituto Crecer">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/logob.png" alt="Merceria Bambina">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/disenarte.png" alt="Diseñarte">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/logonl.PNG" alt="Neoluz">
+                </div>
+
+                
+
+            </div>
+
+            <!-- Grupo duplicado -->
+
+            <div class="brands-group">
+
+                <div class="brand-item">
+                    <img src="assets/icon/logo.png" alt="Lo De Fausti">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/crecer.PNG" alt="Instituto Crecer">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/logob.png" alt="Merceria Bambina">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/disenarte.PNG" alt="Diseñarte">
+                </div>
+
+                <div class="brand-item">
+                    <img src="assets/icon/logonl.PNG" alt="Neoluz">
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        <!-- Proyectos -->
+        <section id="proyectos" class="section-space px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow">Portfolio interactivo</p>
+                        <h2>TRABAJOS<br>QUE HABLAN</h2>
+                    </div>
+                    <p class="section-description">
+                        Entrá, recorré y probá los proyectos publicados. No son renders lindos: son soluciones funcionando en el mundo real.
+                    </p>
+                </div>
+
+                <div id="portfolio-grid" class="grid lg:grid-cols-2 gap-8">
+                    <!-- Inyectado desde data.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="section-space px-6 bg-black">
+            <div class="max-w-7xl mx-auto">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow">Qué hacemos</p>
+                        <h2>SERVICIOS<br>CREATIVOS</h2>
+                    </div>
+                    <p class="section-description">
+                        Unimos diseño gráfico, desarrollo web y producción física para que tu marca mantenga una identidad consistente en todos los formatos.
+                    </p>
+                </div>
+
+                <div id="services-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Inyectado desde data.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Estudio -->
+        <section id="estudio" class="section-space px-6 relative overflow-hidden">
+            <div class="absolute inset-0 studio-grid opacity-30"></div>
+
+            <div class="relative max-w-7xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-16 lg:gap-24 items-center">
+                <div class="reveal">
+                    <p class="eyebrow">Sobre NEOLUZ</p>
+                    <h2 class="text-4xl md:text-6xl font-bold font-syncopate tracking-[-0.04em] leading-tight mb-8">
+                        MÁS QUE DISEÑO.<br>
+                        <span class="text-violet-400">SOLUCIONES REALES.</span>
+                    </h2>
+
+                    <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                        <p>
+                            NEOLUZ Studio nace para ayudar a negocios y emprendedores a transformar una idea en una marca visible, profesional y preparada para crecer.
+                        </p>
+
+                        <p>
+                            Trabajamos desde la identidad visual hasta la implementación: páginas web, tiendas online, sistemas de gestión, piezas gráficas, invitaciones digitales y cartelería personalizada.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 flex flex-wrap gap-3">
+                        <span class="tag">Diseño</span>
+                        <span class="tag">Desarrollo</span>
+                        <span class="tag">Estrategia</span>
+                        <span class="tag">Producción</span>
+                    </div>
+                </div>
+
+                <div class="reveal relative">
+                    <div class="about-card">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent z-10"></div>
+                        <img src="assets/icon/logonl.png" alt="Trabajo realizado por NEOLUZ Studio" class="w-full h-full object-cover">
+                        <div class="absolute left-6 right-6 bottom-6 z-20 flex items-end justify-between gap-4">
+                            <div>
+                                <p class="text-[10px] tracking-[0.25em] uppercase text-violet-300 mb-2">NEOLUZ Studio</p>
+                                <p class="text-xl font-semibold">Del concepto a la realidad.</p>
+                            </div>
+                            <i data-lucide="sparkles" class="w-7 h-7 text-violet-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso -->
+        <section id="proceso" class="section-space px-6 bg-white/[0.015] border-y border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow">Cómo trabajamos</p>
+                        <h2>UN PROCESO<br>CLARO</h2>
+                    </div>
+                    <p class="section-description">
+                        Sin vueltas eternas ni archivos llamados “final-final-ahora-sí”. Cada etapa tiene un objetivo concreto.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
+                    <article class="process-card reveal">
+                        <span>01</span>
+                        <h3>Escuchamos</h3>
+                        <p>Conocemos tu idea, tus objetivos, tu público y lo que necesitás resolver.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span>02</span>
+                        <h3>Diseñamos</h3>
+                        <p>Definimos la estética, la estructura y una propuesta alineada con tu marca.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span>03</span>
+                        <h3>Desarrollamos</h3>
+                        <p>Construimos, probamos y ajustamos cada detalle para que el resultado funcione.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span>04</span>
+                        <h3>Lanzamos</h3>
+                        <p>Entregamos el proyecto listo y acompañamos su puesta en marcha.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="section-space px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow">Experiencias reales</p>
+                        <h2>CLIENTES<br>CONTENTOS</h2>
+                    </div>
+                    <p class="section-description">
+                        Opiniones de personas que confiaron en NEOLUZ para convertir una idea en un proyecto terminado.
+                    </p>
+                </div>
+
+                <div id="reviews-slider" class="grid md:grid-cols-3 gap-6">
+                    <!-- Inyectado desde data.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="section-space px-6 relative overflow-hidden">
+            <div class="absolute inset-0 contact-glow"></div>
+
+            <div class="relative max-w-7xl mx-auto">
+                <div class="contact-panel">
+                    <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-14 lg:gap-20">
+                        <div>
+                            <p class="eyebrow">Contacto</p>
+                            <h2 class="text-4xl md:text-6xl font-bold font-syncopate tracking-[-0.05em] leading-tight mb-7">
+                                HAGAMOS<br>
+                                <span class="text-violet-400">ALGO QUE DESTAQUE.</span>
+                            </h2>
+
+                            <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-lg">
+                                Contanos qué querés crear y te ayudamos a convertirlo en un proyecto claro, profesional y listo para avanzar.
+                            </p>
+
+                            <div class="space-y-5">
+                                <a href="https://wa.me/5492664252739" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                    <span class="contact-icon"><i class="si si-whatsapp"></i></span>
+                                    <span>
+                                        <small>WhatsApp</small>
+                                        +54 9 266 425-2739
+                                    </span>
+                                </a>
+
+                                <a href="https://www.instagram.com/neoluz.studio" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                    <span class="contact-icon"><i class="si si-instagram"></i></span>
+                                    <span>
+                                        <small>Instagram</small>
+                                        @neoluz.studio
+                                    </span>
+                                </a>
+
+                                <div class="contact-link">
+                                    <span class="contact-icon"><i data-lucide="map-pin"></i></span>
+                                    <span>
+                                        <small>Ubicación</small>
+                                        Villa Mercedes, San Luis
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="contact-form" class="contact-form">
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+                            </div>
+
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" placeholder="nombre@email.com">
+                            </div>
+
+                            <div>
+                                <label for="servicio">Servicio</label>
+                                <select id="servicio" name="servicio">
+                                    <option value="Diseño web">Diseño web</option>
+                                    <option value="Tienda online">Tienda online</option>
+                                    <option value="Sistema de gestión">Sistema de gestión</option>
+                                    <option value="Invitación digital">Invitación digital</option>
+                                    <option value="Cartel de neón">Cartel de neón</option>
+                                    <option value="Diseño gráfico">Diseño gráfico</option>
+                                    <option value="Otro proyecto">Otro proyecto</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="mensaje">Contanos tu idea</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Quiero crear..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="primary-button w-full justify-center">
+                                Enviar por WhatsApp
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-6 py-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="logo-dot"></span>
+                <span class="font-syncopate font-bold tracking-tight">NEOLUZ STUDIO</span>
+            </div>
+
+            <p class="text-[10px] text-gray-500 tracking-[0.18em] uppercase text-center">
+                © 2026 NEOLUZ Studio.
+            </p>
+
+            <div class="flex items-center gap-3">
+                <a href="https://www.instagram.com/neoluz.studio" target="_blank" rel="noopener noreferrer" class="social-button" aria-label="Instagram">
+                    <i class="si si-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/5492664252739" target="_blank" rel="noopener noreferrer" class="social-button" aria-label="WhatsApp">
+                    <i class="si si-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante -->
+    <a href="https://wa.me/5492664252739?text=Hola%20NEOLUZ%20Studio,%20quiero%20consultar%20por%20un%20proyecto."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Contactar por WhatsApp">
+       <i class="si si-whatsapp"></i>
+    </a>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

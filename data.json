@@ -1,0 +1,143 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Diseño web",
+      "desc": "Sitios modernos, rápidos y adaptables que presentan tu marca con claridad y convierten visitas en consultas.",
+      "icon": "monitor-smartphone"
+    },
+    {
+      "id": 2,
+      "title": "Tiendas online",
+      "desc": "Tiendas en Tiendanube, Pedix o desarrollos personalizados, listas para vender y simples de administrar.",
+      "icon": "shopping-bag"
+    },
+    {
+      "id": 3,
+      "title": "Sistemas de gestión",
+      "desc": "Soluciones a medida para ventas, caja, stock, producción, proveedores y procesos internos.",
+      "icon": "layout-dashboard"
+    },
+    {
+      "id": 4,
+      "title": "Invitaciones digitales",
+      "desc": "Experiencias interactivas para XV, bodas y eventos con música, RSVP, ubicación, galería y cuenta regresiva.",
+      "icon": "party-popper"
+    },
+    {
+      "id": 5,
+      "title": "Cartelería de neón",
+      "desc": "Carteles personalizados con neón flex para negocios, eventos y decoración, desde el boceto hasta la pieza final.",
+      "icon": "zap"
+    },
+    {
+      "id": 6,
+      "title": "Diseño gráfico",
+      "desc": "Identidad visual, logos, piezas para redes y recursos gráficos consistentes con el universo de tu marca.",
+      "icon": "pen-tool"
+    }
+  ],
+
+  "portfolio": [
+    {
+      "title": "Lo de Fausti",
+      "category": "Sistema de gestión",
+      "desc": "Sistema privado desarrollado a medida para administrar ventas, caja, productos, producción, proveedores e historial desde computadora o celular.",
+      "img": "./assets/img/ldf1.PNG",
+      "url": "",
+      "private": true,
+      "demoUrl": "https://wa.me/5492664252739?text=Hola%20NEOLUZ%20Studio,%20quiero%20conocer%20el%20sistema%20de%20gestión%20desarrollado%20para%20Lo%20de%20Fausti.",
+      "tags": [
+        "Sistema privado",
+        "Supabase",
+        "Responsive"
+      ],
+      "featured": true,
+      "accent": "violet"
+    },
+    {
+      "title": "Bambina Mercería",
+      "category": "Tienda online",
+      "desc": "Renovación visual y optimización de una Tiendanube enfocada en mejorar la presentación y la experiencia de compra.",
+      "img": "./assets/img/bambina1.png",
+      "url": "https://bambinamerceria.mitiendanube.com/",
+      "tags": [
+        "Tiendanube",
+        "Diseño",
+        "Ecommerce"
+      ],
+      "featured": true,
+      "accent": "blue"
+    },
+    {
+      "title": "Instituto Crecer",
+      "category": "Diseño web",
+      "desc": "Sitio institucional moderno para presentar cursos, generar confianza y facilitar consultas directas por WhatsApp.",
+      "img": "./assets/img/crecer.png",
+      "url": "",
+      "tags": [
+        "Landing page",
+        "Responsive",
+        "UI"
+      ],
+      "accent": "cyan"
+    },
+    {
+      "title": "Invitación Georgina",
+      "category": "Invitación digital",
+      "desc": "Experiencia web para XV con portada animada, música, cuenta regresiva, ubicación, confirmación y galería.",
+      "img": "./assets/img/invitacion.png",
+      "url": "",
+      "tags": [
+        "Eventos",
+        "HTML",
+        "Animaciones"
+      ],
+      "accent": "pink"
+    },
+    {
+      "title": "Cartelería personalizada",
+      "category": "Neón flex",
+      "desc": "Diseño y fabricación de carteles sobre acrílico y MDF para comercios, eventos y decoración de interiores.",
+      "img": "./assets/img/neoluz.PNG",
+      "url": "",
+      "tags": [
+        "Neón",
+        "Producción",
+        "Diseño"
+      ],
+      "accent": "violet"
+    },
+    {
+      "title": "Identidad visual",
+      "category": "Diseño gráfico",
+      "desc": "Logos, piezas promocionales y recursos visuales para sostener una imagen profesional en digital e impresión.",
+      "img": "assets/img/identidad.png",
+      "url": "",
+      "tags": [
+        "Branding",
+        "Redes",
+        "Gráfica"
+      ],
+      "accent": "blue"
+    }
+  ],
+
+  "reviews": [
+    {
+      "user": "Macarena S.",
+      "text": "Gracias, quedó precioso. Me encantó el resultado y la atención durante todo el proceso.",
+      "stars": 5
+    },
+    {
+      "user": "Rusha",
+      "text": "Muy responsables con los tiempos de entrega. El diseño quedó impecable.",
+      "stars": 5
+    },
+    {
+      "user": "Julián G.",
+      "text": "La atención fue excelente. Supieron captar la idea y llevarla al resultado que buscábamos.",
+      "stars": 5
+    }
+  ]
+}
