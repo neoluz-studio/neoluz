@@ -43,7 +43,7 @@
       "title": "Lo de Fausti",
       "category": "Sistema de gestión",
       "desc": "Sistema privado desarrollado a medida para administrar ventas, caja, productos, producción, proveedores e historial desde computadora o celular.",
-      "img": "./assets/img/ldf1.PNG",
+      "img": "./assets/img/ldf1.png",
       "url": "",
       "private": true,
       "demoUrl": "https://wa.me/5492664252739?text=Hola%20NEOLUZ%20Studio,%20quiero%20conocer%20el%20sistema%20de%20gestión%20desarrollado%20para%20Lo%20de%20Fausti.",
@@ -99,7 +99,7 @@
       "title": "Cartelería personalizada",
       "category": "Neón flex",
       "desc": "Diseño y fabricación de carteles sobre acrílico y MDF para comercios, eventos y decoración de interiores.",
-      "img": "./assets/img/neoluz.PNG",
+      "img": "./assets/img/neoluz.png",
       "url": "",
       "tags": [
         "Neón",
