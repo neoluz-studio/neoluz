@@ -648,3 +648,219 @@ body.menu-open { overflow: hidden; }
         );
     }
 }
+.about-card{
+
+    position:relative;
+
+    height:620px;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#07070c;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35),
+        0 0 60px rgba(139,92,246,.05);
+
+}
+
+
+/* ===========================
+        LOGO
+=========================== */
+
+.about-logo{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px;
+
+    z-index:2;
+
+}
+
+.about-logo img{
+
+    width:85%;
+
+    max-width:560px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transition:.4s;
+
+}
+
+.about-card:hover .about-logo img{
+
+    transform:scale(1.02);
+
+}
+
+
+/* ===========================
+        GLOW
+=========================== */
+
+.about-glow{
+
+    transition:.5s ease;
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    right:-100px;
+
+    bottom:-100px;
+
+    border-radius:50%;
+
+    background:#8b5cf6;
+
+    filter:blur(120px);
+
+    opacity:.20;
+
+}
+.about-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(139,92,246,.10),
+            transparent 55%
+        );
+
+    z-index:1;
+
+}
+.about-card:hover .about-glow{
+    opacity:.35;
+    transform:scale(1.1);
+}
+
+
+/* ===========================
+        FOOTER
+=========================== */
+
+.about-footer{
+
+    position:absolute;
+
+    left:35px;
+
+    right:35px;
+
+    bottom:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    padding-top:22px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    z-index:3;
+
+}
+
+.about-label{
+
+    margin:0;
+
+    color:#a78bfa;
+
+    font-size:.62rem;
+
+    letter-spacing:.35em;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+
+}
+
+.about-footer h3{
+
+    margin-top:10px;
+
+    font-size:2rem;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+}
+
+.about-icon{
+
+    width:34px;
+
+    height:34px;
+
+    color:#a78bfa;
+
+}
+
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .about-card{
+
+        height:500px;
+
+    }
+
+    .about-logo{
+
+        padding:40px;
+
+    }
+
+    .about-footer{
+
+        left:25px;
+
+        right:25px;
+
+        bottom:25px;
+
+    }
+
+    .about-footer h3{
+
+        font-size:1.5rem;
+
+    }
+
+}
